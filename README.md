@@ -1,31 +1,90 @@
-<h1 align="center">Wellcome to SpaceInvaders 👋 My group's name: God of War</h1>
-<h3 align="center">This would be an stunning thing if your childhood is rushed back! ✨✨</h3>
+[![Code Climate](https://codeclimate.com/github/MiroslavJelaska/SpaceInvaders/badges/gpa.svg)](https://codeclimate.com/github/MiroslavJelaska/SpaceInvaders)
+[![Issue Count](https://codeclimate.com/github/MiroslavJelaska/SpaceInvaders/badges/issue_count.svg)](https://codeclimate.com/github/MiroslavJelaska/SpaceInvaders)
+# Space Invaders
+Game of Space Invaders created in Java without any game engine.
 
-- 🔭 Duc Thinh built up the foundation [Space Invaders](https://trello.com/b/oDNva2Dq/gameoop)
+Runnable JAR can be found at [SpaceInvaders/readme-resources/SpaceInvaders-MiroslavJelaska.jar](SpaceInvaders/readme-resources/SpaceInvaders-MiroslavJelaska.jar)
 
-- 🌱 Ho Duong built up the game's operating structure and control a game **Space Invaders**
+Have some questions or want to give a feedback? You can send me a <a href="mailto:mjelaska.public@gmail.com">an email ✉️</a>
 
-- 👯 Thanh Binh built up awesome characters and character movement [Space Invaders](https://drive.google.com/drive/folders/1hrMVdN93PPVSPFdY2lL9iqEGDGTTqSih?fbclid=IwAR2EgnqrkEP-ZIvGy4MQxNLaJjPvZc7iN_xB2eU5k6UmcKG-y6a3PIQxecw)
+Do you like it? Show it by giving a ⭐️. 🚀
 
-- 🤝 Xuan Vu built up the interface and logic alien [Space Invaders](https://drive.google.com/drive/folders/1RXnYjc-ag83Cl-mcMIOSnnT-prjgDq4Q?fbclid=IwAR2EgnqrkEP-ZIvGy4MQxNLaJjPvZc7iN_xB2eU5k6UmcKG-y6a3PIQxecw)
+[![Preview of Space Invaders Game in Java (without game engine)](readme-resources/screenshot-youtube.png)](https://youtu.be/QaZ_Egr-PVM "Preview of Space Invaders Game in Java (without game engine)")
 
-- 👨‍💻 All of my projects are available at [https://github.com/ducthinh17/Space-Invaders](https://github.com/ducthinh17/Space-Invaders)
+# Game elements
+Visual representation | Package and class name | Type
+------------ | ------------- | -------------
+<img src="readme-resources/JFrame and Canvas.png" alt="JFrame and Canvas" width="100"/> | game.Game (javax.swing.JFrame and java.awt.Canvas) | ui
+<img src="readme-resources/GameOverScreenOverlay - You Won.png" alt="GameOverScreenOverlay - You Won" width="150"/> <img src="readme-resources/GameOverScreenOverlay - You Lost.png" alt="GameOverScreenOverlay - You Lost" width="150"/> | ui.GameOverScreenOverlay | ui
+<img src="readme-resources/StatusRibbon.png" alt="StatusRibbon" width="350"/> | ui.StatusRibbon| ui
+<img src="readme-resources/HeroShip.png" alt="HeroShip" width="75"/> | actors.HeroShip | actor
+<img src="readme-resources/HeroProjectile.png" alt="HeroProjectile" width="50"/> | actors.HeroProjectile | actor
+<img src="readme-resources/InvaderShip.png" alt="InvaderShip" width="75"/> | actors.InvaderShip | actor
+<img src="readme-resources/InvaderProjectile - animation.gif" alt="InvaderProjectile" width="50"/> | actors.InvaderProjectile | actor
+<img src="readme-resources/Explosion - animation.gif" alt="Explosion" width="75"/> | vfx.Explosion | vfx
 
-- 💬 Ask me about **Javascript, Java swing, JFrame,...**
+# Execution flow
+<img src="readme-resources/Flow diagram for SpaceInvaders.png" alt="Explosion" width="350"/> 
 
-- 📫 How to cantact me **pldthinh.ityu@gmail.com**
+# Game mechanics
+## Controls
+| Action | Key      |
+|--------|----------|
+| ⤎ Move Left   | A       |
+| Move Right ⤏  | D        |
+| Shoot 💥 | Spacebar |
 
-- 📄 Know about my experiences [https://github.com/ducthinh17/Space-Invaders](https://github.com/ducthinh17/Space-Invaders)
+## Points
+Points are gained by destroying invader ships, 100 points per each. Bonus points are added for each destroyed ship depending on the time it was destroyed. The sooner in gameplay ship gets destroyed the more bonus points are gained.
 
-- ⚡ Fun fact **Humor and dynamism are always within us**
+Bonus points are given by following function:
+```
+  BonusPoints(time) = 1000 points * e^(-0.1 * time)
+```
+This is actualy function of exponential decay where total amount N<sub>0</sub> is 1000 and exponential decay constant 𝛌 is 0.1 within general formula 
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/baa07972d73b76745139edb5b4aa0aa3b9eac222).
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://instagram.com/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="sapceinvaders" height="30" width="40" /></a>
-<a href="https://www.youtube.com/c/sapceinvaders" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="sapceinvaders" height="30" width="40" /></a>
-</p>
+<img src="readme-resources/bonus-points-plot.png" alt="Bonus points plot" width="250"/>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
+### Code snippet
+``` Java
+  private static final int TotalBonusPoints = 1000;
+  private static final double ExponentialDecayConstant = -0.1;
+  private int bonusPointsWithExponentialDecay(long time){
+      return (int)(TotalBonusPoints * Math.exp(ExponentialDecayConstant * time));
+  }
+```
+
+# Other
+
+## Useful resources
+
+* [gameprogrammingpatterns.com (📖 Book)](http://gameprogrammingpatterns.com/)
+* [Killer Game Programming in Java (📖 Book)](https://www.amazon.com/Killer-Game-Programming-Andrew-Davison/dp/0596007302#immersive-view_1419346106105)
+* [Ryan van Zeben :: Java 2D Game Engine Development (📺 YouTube)](https://www.youtube.com/playlist?list=PL8CAB66181A502179)
+* [gamedev.stackexchange :: Tips for writing the main game loop? (📄 Article)](http://gamedev.stackexchange.com/questions/651/tips-for-writing-the-main-game-loop)
+* [higherorderfun.com :: Understanding the Game Main Loop (📄 Article)](http://higherorderfun.com/blog/2010/08/17/understanding-the-game-main-loop/)
+* [codeincomplete.com :: Javascript Game Foundations - The Game Loop (📄 Article)](http://codeincomplete.com/posts/javascript-game-foundations-the-game-loop/)
+* [The Java™ Tutorials :: Trail: 2D Graphics (📄 Official tutorials)] (http://docs.oracle.com/javase/tutorial/2d/index.html)
+* [Fabien Sanglard's website :: Game timers: Issues and solutions. (📄 Article)] (http://fabiensanglard.net/timer_and_framerate/)
+* [ZetCode :: Java games tutorial (📄 Article collection)](http://zetcode.com/tutorials/javagamestutorial/)
+
+
+## Color scheme
+Color scheme is inspired by "monokai" color scheme. Colors used in game are:
+
+* ![#231f20](http://placehold.it/15/231f20/000000?text=+) `#231f20` (Game background)
+* ![#FFFFFF](http://placehold.it/15/FFFFFF/000000?text=+) `#FFFFFF` (Hero)
+* ![#F92672](http://placehold.it/15/f03c15/000000?text=+) `#F92672` (HeroProjectile)
+* ![#A6E22E](http://placehold.it/15/A6E22E/000000?text=+) `#A6E22E` (InvaderShip and StatusRibbon::Title)
+* ![#AE81FF](http://placehold.it/15/AE81FF/000000?text=+) `#AE81FF` (InvaderProjectile and Explosion)
+* ![#282828](http://placehold.it/15/282828/000000?text=+) `#282828` (StatusRibbon::Background)
+* ![#E6DB74](http://placehold.it/15/E6DB74/000000?text=+) `#E6DB74` (StatusRibbon::Text)
+
+## Credits
+Audio effects used in the game were downloaded from www.freesound.org and were under CC license. Here I'll mention authors and their audio tracks which were used in this game.
+
+* [THE_bizniss](https://www.freesound.org/people/THE_bizniss) - [laser.wav](https://www.freesound.org/people/THE_bizniss/sounds/39459/)
+* [thatjeffcarter](https://www.freesound.org/people/thatjeffcarter) - [inception sound 3.wav](https://www.freesound.org/people/thatjeffcarter/sounds/106521)
+* [Julien Matthey](https://www.freesound.org/people/Julien%20Matthey) - [JM_FX_Boom 01a.wav](https://www.freesound.org/people/Julien%20Matthey/sounds/201571)
+* [qubodup](https://www.freesound.org/people/qubodup) - [Organic Laser Shot](https://www.freesound.org/people/qubodup/sounds/238991)
